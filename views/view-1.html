@@ -12,43 +12,40 @@
   <title>Foodmap</title>
 </head>
 
-<body class="bg-img">
-  <div>
-    <header>
-      <h1 class="text-center text-uppercase py-3">foodmap</h1>
-    </header>
+<body>
+  <header>
+    <h1 class="text-center text-uppercase py-3">foodmap</h1>
+  </header>
 
-    <div class="container-fluid my-3">
-      <div class="row justify-content-center">
-        <div class="col-11 col-md-10 justify-content-center">
-          <img src="../assets/images/map.png" class="img-fluid" alt="mapa-rataurantes">
-        </div>
+  <div class="container-fluid my-3">
+    <div class="row justify-content-center">
+      <div class="col-11 col-md-10 justify-content-center py-3 container-img">
+        <img src="../assets/images/map.png" class="img-fluid" alt="mapa-rataurantes">
       </div>
     </div>
-    <h2 class="text-center">Comida cerca de ti</h2>
-
-    <!-- filtrar restaurates  -->
-    <div class="container-fluid">
-      <div class="row justify-content-center">
-        <select name="" id="" class="col-11 col-md-10 form-control form-control-sm">
-          <option value="ITA">Comida italiana</option>
-          <option value="MEX">Comida mexicana</option>
-          <option value="CHI">Comida china</option>
-          <option value="VEGE">Comida vegetariana</option>
-          <option value="PER">Comida peruana</option>
-          <option value="FAST">Fast food</option>
-          <option value="POST">Postres</option>
-        </select>
-      </div>
-    </div>
-
-    <section id="section-restaurants" class="mt-3">
-      <div class="container-fluid">
-        <div class="row justify-content-center"></div>
-      </div>
-    </section>
-
   </div>
+  <h2 class="text-center">Comida cerca de ti</h2>
+
+  <!-- filtrar restaurates  -->
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <select name="" id="" class="col-11 col-md-10 form-control form-control-sm">
+        <option value="ITA">Comida italiana</option>
+        <option value="MEX">Comida mexicana</option>
+        <option value="CHI">Comida china</option>
+        <option value="VEGE">Comida vegetariana</option>
+        <option value="PER">Comida peruana</option>
+        <option value="FAST">Fast food</option>
+        <option value="POST">Postres</option>
+      </select>
+    </div>
+  </div>
+
+  <section id="section-restaurants" class="mt-3">
+    <div class="container-fluid">
+      <div class="row justify-content-center"></div>
+    </div>
+  </section>
 
   <!-- modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -61,9 +58,13 @@
           </button>
         </div>
         <div class="modal-body">
-          <img>
-          <p id="place">Dirección: <span></span></p>
-          <p id="phone">Teléfono: <span></span></p>
+          <img class="img-fluid">
+          <p id="place"><b>Dirección:</b>
+            <span></span>
+          </p>
+          <p id="phone"><b>Teléfono:</b>
+            <span></span>
+          </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

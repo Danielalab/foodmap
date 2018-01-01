@@ -32,7 +32,7 @@ function begin() {
   }
 
   function createElementHtml(nameRestaurant, placeRestaurant, phoneRestaurant, backgroundgImg) {
-    divRestaurant = $('<div><p class="text-center align-items-center">' + nameRestaurant + '</p></div>');
+    divRestaurant = $('<div><p class="row align-items-center justify-content-center">' + nameRestaurant + '</p></div>');
     divRestaurant.addClass('col-5 bg-img m-1 row justify-content-center');
     divRestaurant.attr('data-toggle', 'modal');
     divRestaurant.attr('data-target', '#exampleModal');

@@ -54,11 +54,11 @@ body>div#loader {
 /* style Vista principal */
 
 body{
-  background: #3e6696;
+  background: #F8F8F8;
 }
 
-h1, h2 {
-  color: white;
+h1, h2, h5, #phone, #place {
+  color: #56AD38;
 }
 
 h2 {
@@ -72,18 +72,10 @@ h2 {
   background-size: cover;
 }
 
-body>div {
-  min-height: 100vh;  
-  background-color: rgba(56, 77, 99, 0.315);
-}
-
 header {
-  background-color: rgba(27, 51, 75, 0.74);
-}
-
-img {
-  border: 5px solid rgba(27, 51, 75, 0.945);
-  border: 5px solid ;
+  background-color: white;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid (0, 0, 0, 0.1);
 }
 
 /* style SECTION RESTAURANTS */
@@ -92,18 +84,23 @@ img {
   cursor: pointer;
   min-height: 12vh;
   padding: 0;
-  transition: all 500ms;
+  transition: all 300ms ease-in;
 }
 
 #section-restaurants>.container-fluid>.row>div>p {
+  font-size: 1.1rem;
+  font-weight: 600;
   min-height: 100%;
-  transition: all 500ms;  
+  transition: all ease;  
   width: 100%;
 }
 
 #section-restaurants>.container-fluid>.row>div>p:hover {
-  background: rgba(128, 128, 128, 0.377);
+  background: rgba(128, 128, 128, 0.575);
 }
 
 /* style MODAL */
 
+#phone>span, #place>span {
+  color: #000000;
+}
