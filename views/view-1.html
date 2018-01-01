@@ -19,9 +19,8 @@
 
   <div class="container-fluid my-3">
     <div class="row justify-content-center">
-      <div class="col-11 col-md-10 justify-content-center py-3 container-img">
-        <img src="../assets/images/map.png" class="img-fluid" alt="mapa-rataurantes">
-      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15603.608395195419!2d-77.02674515192797!3d-12.118850691921482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8137c30393f%3A0x5268cb2b1c4b162b!2sMiraflores!5e0!3m2!1ses-419!2spe!4v1514849348840"
+        frameborder="0" style="border:0" allowfullscreen class="col-11 justify-content-center py-3"></iframe>
     </div>
   </div>
   <h2 class="text-center">Comida cerca de ti</h2>
@@ -58,13 +57,25 @@
           </button>
         </div>
         <div class="modal-body">
-          <img class="img-fluid">
-          <p id="place"><b>Dirección:</b>
-            <span></span>
-          </p>
-          <p id="phone"><b>Teléfono:</b>
-            <span></span>
-          </p>
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <div class="col-11 col-md-10 justify-content-center py-3">
+                <img class="img-fluid" id="map">
+              </div>
+            </div>
+            <div class="row">
+              <p id="place" class="col 11">
+                <b>Dirección:</b>
+                <span></span>.
+              </p>
+            </div>
+            <div class="row">
+              <p id="phone" class="col-11">
+                <b>Teléfono:</b>
+                <span></span>
+              </p>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -82,3 +93,4 @@
 </body>
 
 </html>
+

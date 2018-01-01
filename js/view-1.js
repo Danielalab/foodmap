@@ -17,7 +17,7 @@ function begin() {
 
   function getDataFood(typeFood) {
     var nameRestaurant;
-    var map;
+    var mapRestaurant;
     var phoneRestaurant;
     var placeRestaurant;
     var backgroundgImg;
@@ -27,18 +27,20 @@ function begin() {
       placeRestaurant = typeFood[index].place;
       phoneRestaurant = typeFood[index].phone;
       backgroundgImg = typeFood[index].bg;
-      createElementHtml(nameRestaurant, placeRestaurant, phoneRestaurant, backgroundgImg);
+      mapRestaurant = typeFood[index].map;
+      createElementHtml(nameRestaurant, placeRestaurant, phoneRestaurant, backgroundgImg, mapRestaurant);
     }
   }
 
-  function createElementHtml(nameRestaurant, placeRestaurant, phoneRestaurant, backgroundgImg) {
-    divRestaurant = $('<div><p class="row align-items-center justify-content-center">' + nameRestaurant + '</p></div>');
+  function createElementHtml(nameRestaurant, placeRestaurant, phoneRestaurant, backgroundgImg, mapRestaurant) {
+    divRestaurant = $('<div><p class="row align-items-center justify-content-center text-center">' + nameRestaurant + '</p></div>');
     divRestaurant.addClass('col-5 bg-img m-1 row justify-content-center');
     divRestaurant.attr('data-toggle', 'modal');
     divRestaurant.attr('data-target', '#exampleModal');
     divRestaurant.attr('data-name', nameRestaurant);
     divRestaurant.attr('data-phone', phoneRestaurant);
     divRestaurant.attr('data-place', placeRestaurant);
+    divRestaurant.attr('data-map', mapRestaurant);    
     divRestaurant.css('background-image', 'url(' + backgroundgImg + ')');
     addElementsHtml(divRestaurant);
   }
@@ -54,13 +56,15 @@ function begin() {
     var titleModal = $(this).attr('data-name');
     var placeModal = $(this).attr('data-place');
     var phoneModal = $(this).attr('data-phone');
-    createElementsHtmlModal(titleModal, placeModal, phoneModal);
+    var mapModal = $(this).attr('data-map') ;
+    createElementsHtmlModal(titleModal, placeModal, phoneModal, mapModal);
   }
 
-  function createElementsHtmlModal(titleModal, placeModal, phoneModal) {
+  function createElementsHtmlModal(titleModal, placeModal, phoneModal, mapModal) {
     $('.modal-title').text(titleModal);
     $('#place>span').text(placeModal);
     $('#phone>span').text(phoneModal);
+    $('#map').attr('src', mapModal);
   }
 
   function effectMouseOver() {

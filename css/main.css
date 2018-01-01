@@ -78,11 +78,16 @@ header {
   border-bottom: 1px solid (0, 0, 0, 0.1);
 }
 
+iframe {
+  height: 45vh;
+}
+
 /* style SECTION RESTAURANTS */
+
 #section-restaurants>.container-fluid>.row>div {
   color: transparent;
   cursor: pointer;
-  min-height: 12vh;
+  min-height: 14vh;
   padding: 0;
   transition: all 300ms ease-in;
 }
@@ -104,3 +109,13 @@ header {
 #phone>span, #place>span {
   color: #000000;
 }
+
+/* style DESKTOP */
+
+@media (min-width : 780px){
+
+  iframe {
+    height: 60vh;
+  }
+}
+
